@@ -1,0 +1,21 @@
+{
+  "name": "rhizomatics",
+  "owner": {
+    "name": "Rhizomatics",
+    "url": "https://github.com/rhizomatics"
+  },
+  "metadata": {
+    "description": "Agent skills for Rhizomatics open source tools"
+  },
+  "plugins": [
+    {
+      "name": "homeassistant-repl",
+      "source": {
+        "source": "github",
+        "repo": "rhizomatics/homeassistant-repl"
+      },
+      "description": "Teaches an agent to run Python against a running Home Assistant with ha-repl, for custom component development",
+      "homepage": "https://homeassistant-repl.rhizomatics.org.uk"
+    }
+  ]
+}
