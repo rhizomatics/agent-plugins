@@ -1,5 +1,7 @@
 # Rhizomatics Agent Plugins
 
+[![managed by hq](https://raw.githubusercontent.com/rhizomatics/hq/main/assets/badge-managed-by-hq.svg)](https://github.com/rhizomatics/hq)
+
 Plugin marketplace for [Rhizomatics](https://github.com/rhizomatics) open source tools. Each plugin
 carries skills that teach a coding agent how to use one of the tools.
 
