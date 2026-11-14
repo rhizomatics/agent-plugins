@@ -1,7 +1,6 @@
 # Rhizomatics Agent Plugins
 
-Plugin marketplace for [Rhizomatics](https://github.com/rhizomatics) open source tools. Each plugin
-carries skills that teach a coding agent how to use one of the tools.
+Plugin marketplace for [Rhizomatics](https://www.rhizomatics.org.uk) open source tools. Each plugin carries skills that teach a coding agent how to use one of the tools.
 
 ## Install
 
