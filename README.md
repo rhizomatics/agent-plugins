@@ -18,16 +18,12 @@ Then install the plugins you want:
 claude plugin install homeassistant-repl@rhizomatics
 ```
 
-In [GitHub Copilot CLI](https://docs.github.com/en/copilot/how-tos/copilot-cli), which reads the same
-`.claude-plugin/marketplace.json`:
+For other agents (GitHub Copilot, Codex, Cursor, Gemini and more), the [`skills` CLI](https://skills.sh) installs a
+plugin's skills straight from its folder, e.g.
 
 ```bash
-copilot plugin marketplace add rhizomatics/agent-plugins
-copilot plugin install homeassistant-repl@rhizomatics
+npx skills add https://github.com/rhizomatics/homeassistant-repl/tree/main/plugin/skills/ha-repl
 ```
-
-For other agents (Codex, Cursor, Gemini and more), the [`skills` CLI](https://skills.sh) installs a plugin's skills
-straight from its own repo, e.g. `npx skills add rhizomatics/homeassistant-repl`.
 
 ## Plugins
 
@@ -37,9 +33,11 @@ straight from its own repo, e.g. `npx skills add rhizomatics/homeassistant-repl`
 
 ## Adding a plugin
 
-The plugin lives in the tool's own repo, so its skills are versioned with the code they describe:
+The plugin lives in the tool's own repo, so its skills are versioned with the code they describe, in a folder of
+its own (`plugin/`), so that folder can be submitted to the Claude plugin directory without the tool's code:
 
-1. In the tool's repo, add `.claude-plugin/plugin.json` and a `skills/<name>/SKILL.md`.
-2. Add an entry for it to [`.claude-plugin/marketplace.json`](.claude-plugin/marketplace.json) here,
-   with a `github` source pointing at that repo.
-3. Run `claude plugin validate .` in both repos.
+1. In the tool's repo, add `plugin/.claude-plugin/plugin.json`, a square `plugin/.claude-plugin/icon.png` and
+   `plugin/skills/<name>/SKILL.md`. Keep the folder to Markdown, JSON and images.
+2. Add an entry for it to [`.claude-plugin/marketplace.json`](.claude-plugin/marketplace.json) here, with a
+   `git-subdir` source: `url` the tool's repo, `path` `plugin`.
+3. Run `claude plugin validate .` here and `claude plugin validate plugin` in the tool's repo.
