@@ -1,8 +1,7 @@
 {
   "name": "rhizomatics",
   "owner": {
-    "name": "Rhizomatics",
-    "url": "https://www.rhizomatics.org.uk"
+    "name": "Rhizomatics"
   },
   "metadata": {
     "description": "Agent skills for Rhizomatics open source tools"
