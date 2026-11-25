@@ -18,6 +18,17 @@ Then install the plugins you want:
 claude plugin install homeassistant-repl@rhizomatics
 ```
 
+In [GitHub Copilot CLI](https://docs.github.com/en/copilot/how-tos/copilot-cli), which reads the same
+`.claude-plugin/marketplace.json`:
+
+```bash
+copilot plugin marketplace add rhizomatics/agent-plugins
+copilot plugin install homeassistant-repl@rhizomatics
+```
+
+For other agents (Codex, Cursor, Gemini and more), the [`skills` CLI](https://skills.sh) installs a plugin's skills
+straight from its own repo, e.g. `npx skills add rhizomatics/homeassistant-repl`.
+
 ## Plugins
 
 | Plugin | What it teaches an agent | Source |
